@@ -43,7 +43,6 @@ public class TeaShopTest {
     void shouldSetDefaultWaterTemperature() {
         TeaShop newShop = new TeaShop(85);
         newShop.addTea(greenTea);
-        // Indirect testing via prepareTea method
         TeaCup cup = newShop.prepareTea("Green Tea");
         assertThat(cup).isNotNull();
     }
@@ -51,7 +50,6 @@ public class TeaShopTest {
     @Test
     void shouldChangeWaterTemperature() {
         teaShop.setWaterTemperature(95);
-        // Indirect testing, could be enhanced with a getter
         TeaCup cup = teaShop.prepareTea("Green Tea");
         assertThat(cup).isNotNull();
     }
